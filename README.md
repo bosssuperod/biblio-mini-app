@@ -1,5 +1,5 @@
-# Polymer App Toolbox - Starter Kit
+# Biblio-mini-app
+Created using Polymer App Toolbox - Starter Kit
 
-[![Build Status](https://travis-ci.org/Polymer/polymer-starter-kit.svg?branch=master)](https://travis-ci.org/Polymer/polymer-starter-kit)
-
-# biblio-mini-app
+# Demo
+https://upbeat-noyce-22c6ac.netlify.com/
