@@ -1,7 +1,7 @@
 {
-  "name": "My App",
-  "short_name": "My App",
-  "description": "My App description",
+  "name": "Biblio Mini ",
+  "short_name": "Biblio Mini ",
+  "description": "Biblio Mini  description",
   "icons": [
     {
       "src": "images/manifest/icon-192x192.png",

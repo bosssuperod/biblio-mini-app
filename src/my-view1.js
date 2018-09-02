@@ -22,14 +22,35 @@ class MyView1 extends PolymerElement {
 
           padding: 10px;
         }
+
+        iron-image {
+          transform: translateY(-20%);
+          border-radius: 10px;
+          width:164px;
+          height:220px;
+          box-shadow: 0px 3px 2px grey;
+          float:left;
+          }
+
+        h1{
+          color: white;
+        }
+
+        p{
+          color:white;
+        }
       </style>
 
-      <div class="card">
-      <iron-image style="width:400px; height:400px;" sizing="contain" src="https://d1re4mvb3lawey.cloudfront.net/pg1017/cover.jpg"></iron-image>
-      <h1>View One</h1>
+      <div class="card" style="background-color: var(--app-card-color);">
+        <div class="book-image">
+        <iron-image sizing="contain" src="https://d1re4mvb3lawey.cloudfront.net/pg1017/cover.jpg"></iron-image>
+        </div>
+        <div class="details" style="padding-left:100px;">
+        <h1>View One</h1>
         <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
         <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
-      </div>
+        </div>
+        </div>
     `;
   }
 }

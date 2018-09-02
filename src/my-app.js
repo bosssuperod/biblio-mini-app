@@ -36,8 +36,9 @@ class MyApp extends PolymerElement {
     return html`
       <style>
         :host {
-          --app-primary-color: #4285f4;
-          --app-secondary-color: black;
+          --app-primary-color: #F5C63A; 
+          --app-secondary-color: #737373;
+          --app-card-color:#AA86F1;
 
           display: block;
         }
@@ -68,7 +69,7 @@ class MyApp extends PolymerElement {
         }
 
         .drawer-list a.iron-selected {
-          color: black;
+          color: 737373;
           font-weight: bold;
         }
       </style>
@@ -96,7 +97,7 @@ class MyApp extends PolymerElement {
           <app-header slot="header" condenses="" reveals="" effects="waterfall">
             <app-toolbar>
               <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
-              <div main-title="">My App</div>
+              <div main-title="">Biblio Mini </div>
             </app-toolbar>
           </app-header>
 
