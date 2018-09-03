@@ -11,6 +11,8 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
 import '@polymer/iron-image/iron-image.js';
+import '@polymer/iron-ajax/iron-ajax.js';
+
 
 
 class MyView1 extends PolymerElement {
@@ -32,25 +34,35 @@ class MyView1 extends PolymerElement {
           float:left;
           }
 
-        h1{
+        h3, h4, ul{
           color: white;
+          padding-left:20%;
         }
 
-        p{
-          color:white;
-        }
+      
+
       </style>
 
       <div class="card" style="background-color: var(--app-card-color);">
         <div class="book-image">
+        <a href="[[rootPath]]view2">
         <iron-image sizing="contain" src="https://d1re4mvb3lawey.cloudfront.net/pg1017/cover.jpg"></iron-image>
+        </a>
         </div>
-        <div class="details" style="padding-left:100px;">
-        <h1>View One</h1>
-        <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
-        <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
-        </div>
-        </div>
+        <iron-ajax auto
+        url="index.json"
+        handle-as="json"
+        last-response="{{ajaxResponse}}"></iron-ajax>
+
+        <template is="dom-repeat" items="{{ajaxResponse}}">
+          <h3>[[ajaxResponse.title]]</h3>
+          <h4>[[ajaxResponse.contributors]]</h4>  
+          <ul style="list-style-type:none">
+            <li>ISBN | [[ajaxResponse.isbn]]</li>
+            <li>Publisher | [[ajaxResponse.pathTo.toc]]</li>
+          </ul>
+        </template>
+      </div>
     `;
   }
 }

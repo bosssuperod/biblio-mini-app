@@ -10,6 +10,7 @@
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
+import '@polymer/iron-ajax/iron-ajax.js';
 
 class MyView2 extends PolymerElement {
   static get template() {
@@ -23,10 +24,17 @@ class MyView2 extends PolymerElement {
       </style>
 
       <div class="card">
-        <div class="circle">2</div>
-        <h1>View Two</h1>
-        <p>Ea duis bonorum nec, falli paulo aliquid ei eum.</p>
-        <p>Id nam odio natum malorum, tibique copiosae expetenda mel ea.Detracto suavitate repudiandae no eum. Id adhuc minim soluta nam.Id nam odio natum malorum, tibique copiosae expetenda mel ea.</p>
+        <iron-ajax auto
+        url="index.json"
+        handle-as="json"
+        last-response="{{ajaxResponse}}"></iron-ajax>
+
+        <template is="dom-repeat" items="{{ajaxResponse}}">
+          
+            <h3>[[ajaxResponse.title]]</h3>
+            
+            <p>https://d1re4mvb3lawey.cloudfront.net/pg1017[[ajaxResponse.pathTo.toc]]</p>
+        </template>
       </div>
     `;
   }
