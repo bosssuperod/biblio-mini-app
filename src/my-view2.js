@@ -25,7 +25,7 @@ class MyView2 extends PolymerElement {
 
       <div class="card">
         <iron-ajax auto
-        url="index.json"
+        url="https://d1re4mvb3lawey.cloudfront.net/pg1017/index.json"
         handle-as="json"
         last-response="{{ajaxResponse}}"></iron-ajax>
 
