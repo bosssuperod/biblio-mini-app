@@ -13,8 +13,6 @@ import './shared-styles.js';
 import '@polymer/iron-image/iron-image.js';
 import '@polymer/iron-ajax/iron-ajax.js';
 
-
-
 class MyView1 extends PolymerElement {
   static get template() {
     return html`
@@ -38,9 +36,6 @@ class MyView1 extends PolymerElement {
           color: white;
           padding-left:20%;
         }
-
-      
-
       </style>
 
       <div class="card" style="background-color: var(--app-card-color);">
@@ -50,7 +45,7 @@ class MyView1 extends PolymerElement {
         </a>
         </div>
         <iron-ajax auto
-        url="index.json"
+        url="../index.json"
         handle-as="json"
         last-response="{{ajaxResponse}}"></iron-ajax>
 
