@@ -45,7 +45,7 @@ class MyView1 extends PolymerElement {
         </a>
         </div>
         <iron-ajax auto
-        url="https://d1re4mvb3lawey.cloudfront.net/pg1017/index.json"
+        url="../json/index.json"
         handle-as="json"
         last-response="{{ajaxResponse}}"></iron-ajax>
 
